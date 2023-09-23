@@ -138,6 +138,14 @@ $(".fancy").click(function () {
   let value = $(".input").val();
   addTaskToTableFRomAdd(value);
 });
+// when click enter add the taske
+$(".input").keypress(function (event) {
+  console.log(event.key);
+  if (event.key == "Enter") {
+    let value = $(".input").val();
+    addTaskToTableFRomAdd(value);
+  }
+});
 
 $(".delete").click(function () {
   let id = $(this).attr("data-id");
